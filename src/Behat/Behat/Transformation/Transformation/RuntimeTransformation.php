@@ -8,13 +8,15 @@
  * file that was distributed with this source code.
  */
 
-namespace Behat\Behat\Transformation\Call;
+namespace Behat\Behat\Transformation\Transformation;
 
 use Behat\Behat\Transformation\Transformation;
 use Behat\Testwork\Call\RuntimeCallee;
 
 /**
  * Transformation that is created and executed in the runtime.
+ *
+ * @deprecated Will be removed in 4.0. Use specific transformations instead
  *
  * @author Konstantin Kudryashov <ever.zet@gmail.com>
  */
@@ -52,6 +54,6 @@ final class RuntimeTransformation extends RuntimeCallee implements Transformatio
      */
     public function __toString()
     {
-        return 'Transform ' . $this->getPattern();
+        return 'Transform ' . $this->pattern;
     }
 }
